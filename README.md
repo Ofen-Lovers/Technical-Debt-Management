@@ -6,6 +6,7 @@ A repository made for the Software Implementations and Management Activity
 - Krystal Heart M. Bacalso (Lead Developer)
 - Cyreh M. Bayson (Refactoring Specialist)
 - Joseph Jose A. Deysolong (Git Manager)
+- Shaira Jane T. Dadios (Tester/Documenter)
 - Jhon Lloyd F. Omblero (Tester/Documenter)
 
 ## Overview
