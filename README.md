@@ -21,7 +21,9 @@ The deduction computation was simplified and did not include any exemption or va
 ### New Code:
 Error Handling: The program now raises a ValueError for negative salary values and invalid user input, ensuring proper error management.
 Exemption Rules: Added logic to handle SSS exemption for employees earning below 8250 and tax exemption for employees earning below 25000.
+
 Improved Modularity: The computation of deductions is separated into the compute_deductions function, which returns the values, rather than directly printing them within the function. The main function handles the user input and displays the results.
+
 Input Validation: Ensures that only valid numerical input is processed. If the user enters a non-numeric value or a negative salary, an appropriate error message is displayed.
 
 ## Unit Tests:
