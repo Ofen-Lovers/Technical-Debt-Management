@@ -36,3 +36,7 @@ def main():
     print("Tax Deduction:", tax)
     print("Total Deductions:", deductions)
     print("\nNet Salary:", net_salary)
+
+
+if __name__ == "__main__":
+    main()
