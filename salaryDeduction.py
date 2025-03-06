@@ -20,4 +20,5 @@ def compute_deductions(salary):
 
 ### Add a main Function
 salary = float(input("Enter your monthly salary: "))    ### Add Error Handling.
+### If Salary is below 8250, user does not qualifty for sss.
 compute_deductions(salary)
