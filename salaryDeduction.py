@@ -1,4 +1,7 @@
 def compute_deductions(salary):
+    if salary < 0:
+        raise ValueError("Salary cannot be negative. Please enter a valid salary.")
+    
     sss = 1200
     philhealth = (salary * 0.05) / 2
     pagibig = 100
