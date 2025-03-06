@@ -4,22 +4,35 @@ def compute_deductions(salary):
     pagibig = 100
     tax = 1875 # Assuming fixed value for simplicity
 
-    deductions = sss + philhealth + pagibig + tax 
+    # SSS Exemption for minimum wage earners (salary below 8250)
+    if salary < 8250:
+        sss = 0
+
+    #Deductions and net salary computations
+    deductions = sss + philhealth + pagibig + tax
     net_salary = salary - deductions
 
-def main():
-    salary = float(input("Enter your monthly salary: "))    ### Add Error Handling.
-    compute_deductions(salary)
+    return sss, philhealth, pagibig, tax, deductions, net_salary 
 
-    print("Gross Salary:", salary)
+def main():
+    try:
+        salary = float(input("Enter your monthly salary: ")) #User input for salary
+        print("Gross Salary:", salary)
+    except ValueError:
+        print("Please enter a valid number.")
+        return
+
+    #Function call to compute deductions and net salary
+    sss, philhealth, pagibig, tax, deductions, net_salary = compute_deductions(salary)
+
+    print("\n-----Deductables-----")
     print("SSS Deduction:", sss)
     print("PhilHealth Deduction:", philhealth)
     print("Pag-IBIG Deduction:", pagibig)
     print("Tax Deduction:", tax)
     print("Total Deductions:", deductions)
-    print("Net Salary:", net_salary)
+    print("\nNet Salary:", net_salary)
 
-### Add a main Function
-salary = float(input("Enter your monthly salary: "))    ### Add Error Handling.
-### If Salary is below 8250, user does not qualifty for sss.
-compute_deductions(salary)
+if __name__ == "__main__":
+    main()
+
